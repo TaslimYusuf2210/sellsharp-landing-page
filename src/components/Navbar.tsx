@@ -19,17 +19,17 @@ export function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-                isScrolled ? "bg-midnight-950/80 backdrop-blur-md border-white/10" : "bg-transparent py-4"
+                isScrolled ? "bg-white/90 backdrop-blur-md border-slate-200 shadow-sm" : "bg-transparent py-4"
             )}
         >
             <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-violet-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
                         <Rocket className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-xl font-bold tracking-tight text-white">
-                        Sell<span className="text-violet-500">Sharp</span>
+                    <span className="text-xl font-bold tracking-tight text-slate-900">
+                        Sell<span className="text-blue-600">Sharp</span>
                     </span>
                 </div>
 
@@ -39,7 +39,7 @@ export function Navbar() {
                         <a
                             key={item}
                             href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                            className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                            className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
                         >
                             {item}
                         </a>
@@ -48,14 +48,14 @@ export function Navbar() {
 
                 {/* CTA Button */}
                 <div className="hidden md:block">
-                    <button className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-violet-500 text-white font-medium text-sm transition-all hover:shadow-[0_0_20px_rgba(124,58,237,0.5)]">
+                    <button className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm transition-all shadow-sm hover:shadow-md">
                         Get Started
                     </button>
                 </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-white"
+                    className="md:hidden text-slate-900"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X /> : <Menu />}
@@ -69,21 +69,21 @@ export function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-midnight-950 border-b border-white/10 overflow-hidden"
+                        className="md:hidden bg-white border-b border-slate-200 overflow-hidden"
                     >
                         <div className="flex flex-col p-6 gap-4">
                             {["Features", "How it Works", "Testimonials", "Pricing"].map((item) => (
                                 <a
                                     key={item}
                                     href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                                    className="text-base text-slate-300 hover:text-white"
+                                    className="text-base text-slate-600 hover:text-blue-600"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {item}
                                 </a>
                             ))}
-                            <hr className="border-white/10 my-2" />
-                            <button className="w-full py-3 rounded-lg bg-violet-600 text-white font-medium">
+                            <hr className="border-slate-100 my-2" />
+                            <button className="w-full py-3 rounded-lg bg-blue-600 text-white font-medium">
                                 Get Started
                             </button>
                         </div>

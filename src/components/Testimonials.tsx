@@ -3,9 +3,9 @@ import { Quote } from "lucide-react"
 
 export function Testimonials() {
     return (
-        <section id="testimonials" className="py-20 bg-slate-900/30">
+        <section id="testimonials" className="py-20 bg-slate-50">
             <div className="max-w-7xl mx-auto px-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-16">
                     Loved by High-Growth Teams
                 </h2>
 
@@ -17,16 +17,16 @@ export function Testimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="bg-white/5 border border-white/10 p-8 rounded-2xl relative"
+                            className="bg-white border border-slate-200 p-8 rounded-2xl relative shadow-sm hover:shadow-md transition-all"
                         >
-                            <Quote className="absolute top-6 right-6 w-8 h-8 text-white/5" />
-                            <p className="text-slate-300 italic mb-6">
+                            <Quote className="absolute top-6 right-6 w-8 h-8 text-blue-100" />
+                            <p className="text-slate-600 italic mb-6">
                                 "SellSharp completely transformed our outbound play. We went from a 2% reply rate to 12% in just two weeks. It's insane."
                             </p>
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400" />
+                                <div className="w-10 h-10 rounded-full bg-slate-200" />
                                 <div>
-                                    <div className="text-white font-semibold">Sarah Jenkins</div>
+                                    <div className="text-slate-900 font-semibold">Sarah Jenkins</div>
                                     <div className="text-slate-500 text-sm">VP of Sales, TechFlow</div>
                                 </div>
                             </div>
