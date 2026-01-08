@@ -25,17 +25,17 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                        <Rocket className="w-5 h-5 text-white" />
+                    <div className="lg:w-40 w-25 h-15 rounded-lg flex items-center justify-center">
+                        <span><img className="w-full h-full" src="sellsharpLogo.svg" alt="logo" /></span>
                     </div>
-                    <span className="text-xl font-bold tracking-tight text-slate-900">
+                    {/* <span className="text-xl font-bold tracking-tight text-slate-900">
                         Sell<span className="text-blue-600">Sharp</span>
-                    </span>
+                    </span> */}
                 </div>
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-8">
-                    {["Features", "How it Works", "Testimonials", "Pricing"].map((item) => (
+                    {["Features", "How it Works", "Testimonials"].map((item) => (
                         <a
                             key={item}
                             href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
@@ -72,7 +72,7 @@ export function Navbar() {
                         className="md:hidden bg-white border-b border-slate-200 overflow-hidden"
                     >
                         <div className="flex flex-col p-6 gap-4">
-                            {["Features", "How it Works", "Testimonials", "Pricing"].map((item) => (
+                            {["Features", "How it Works", "Testimonials"].map((item) => (
                                 <a
                                     key={item}
                                     href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
